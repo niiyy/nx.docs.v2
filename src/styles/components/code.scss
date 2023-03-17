@@ -1,0 +1,48 @@
+.codeblock {
+  background-color: rgba(73, 67, 67, 0.39);
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+
+  .codeblock__body {
+    color: #8d8585;
+    font-weight: 500;
+
+    .copy__code {
+      position: absolute;
+      right: 10px;
+      background: none;
+      border: none;
+      border: 1px solid #555356;
+      padding: 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+      cursor: pointer;
+      transition: 0.3s;
+
+      svg {
+        path {
+          transition: 0.3s;
+        }
+      }
+
+      &:not(:is(.--active)):hover {
+        background: #383737;
+      }
+
+      &.--active {
+        border: 1px solid #388038;
+        background: #38803840;
+
+        svg {
+          path {
+            stroke: #388038;
+          }
+        }
+      }
+    }
+  }
+}

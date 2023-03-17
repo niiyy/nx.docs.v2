@@ -1,0 +1,492 @@
+[
+  {
+    "name": "client",
+    "_path": "apps/rc/client/modules",
+    "items": [
+      {
+        "name": "events",
+        "items": [
+          {
+            "name": "EmitServerEvent",
+            "service": "Events",
+            "file": "apps/rc/client/modules/events/events.service.ts",
+            "params": [
+              {
+                "name": "eventName",
+                "type": "string",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              },
+              {
+                "name": "callback",
+                "type": "(...args: unknown[]) => void",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              },
+              {
+                "name": "args",
+                "type": "unknown[]",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Client",
+            "uuid": "5aa1b579-e690-43ee-9a63-c588d93240b8",
+            "type": "method"
+          }
+        ],
+        "uuid": "2fcb0c09-8d2a-4d63-8427-3b5d269932c5",
+        "type": "service"
+      },
+      {
+        "name": "input",
+        "items": [
+          {
+            "name": "IsActive",
+            "service": "Input",
+            "file": "apps/rc/client/modules/input/input.service.ts",
+            "params": [],
+            "return": "boolean",
+            "category": "Client",
+            "uuid": "5adb473d-9307-42f1-bce1-916d7bd7555d",
+            "type": "method"
+          },
+          {
+            "name": "Destroy",
+            "service": "Input",
+            "file": "apps/rc/client/modules/input/input.service.ts",
+            "params": [
+              {
+                "name": "cb",
+                "type": "ResponseCB",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": true
+              }
+            ],
+            "return": "void",
+            "category": "Client",
+            "uuid": "53f21d76-f255-4e55-b8f0-bea0eba796c3",
+            "type": "method"
+          },
+          {
+            "name": "Create",
+            "service": "Input",
+            "file": "apps/rc/client/modules/input/input.service.ts",
+            "params": [
+              {
+                "name": "data",
+                "type": "InputsData",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              },
+              {
+                "name": "handler",
+                "type": "() => void",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Client",
+            "uuid": "931fdfa1-8df3-47da-ab06-0e627bb9fb60",
+            "type": "method"
+          }
+        ],
+        "uuid": "9be701cd-e8e7-464f-9c41-1e5b5ca61efc",
+        "type": "service"
+      },
+      {
+        "name": "loadingbar",
+        "items": [
+          {
+            "name": "IsActive",
+            "service": "LoadingBar",
+            "file": "apps/rc/client/modules/loading-bar/loadingBar.service.ts",
+            "params": [],
+            "return": "boolean",
+            "category": "Client",
+            "uuid": "445f1fb8-3431-4eee-a744-f28f88f39c78",
+            "type": "method"
+          },
+          {
+            "name": "Create",
+            "service": "LoadingBar",
+            "file": "apps/rc/client/modules/loading-bar/loadingBar.service.ts",
+            "params": [
+              {
+                "name": "loadingbar",
+                "type": "CreationLoadingbarType",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "Promise<void>",
+            "category": "Client",
+            "uuid": "344a121e-e0b3-4dfc-a48b-831c737f8314",
+            "type": "method"
+          }
+        ],
+        "uuid": "248be63a-2a4f-4de6-aa10-acab490893a3",
+        "type": "service"
+      },
+      {
+        "name": "menu",
+        "items": [
+          {
+            "name": "Create",
+            "service": "Menu",
+            "file": "apps/rc/client/modules/menu/menu.service.ts",
+            "params": [
+              {
+                "name": "menu",
+                "type": "Menu",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Client",
+            "uuid": "d136b3f4-40ff-4415-a6e7-43641e08b358",
+            "type": "method"
+          }
+        ],
+        "uuid": "c8311d12-8f64-46f9-9b4b-ddcabad247dd",
+        "type": "service"
+      },
+      {
+        "name": "player",
+        "items": [],
+        "uuid": "1356771c-367e-4982-848e-4a43ae0e9271",
+        "type": "service"
+      },
+      {
+        "name": "timeline",
+        "items": [
+          {
+            "name": "Create",
+            "service": "Timeline",
+            "file": "apps/rc/client/modules/timeline/timeline.service.ts",
+            "params": [
+              {
+                "name": "timeline",
+                "type": "CreateTimelineType",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Client",
+            "uuid": "e8f69650-834d-4183-a176-f7899c0a5f7c",
+            "type": "method"
+          },
+          {
+            "name": "Update",
+            "service": "Timeline",
+            "file": "apps/rc/client/modules/timeline/timeline.service.ts",
+            "params": [
+              {
+                "name": "data",
+                "type": "UpdateTimelineType",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Client",
+            "uuid": "68ba1539-0a64-4169-acd2-f75430453443",
+            "type": "method"
+          },
+          {
+            "name": "Destroy",
+            "service": "Timeline",
+            "file": "apps/rc/client/modules/timeline/timeline.service.ts",
+            "params": [],
+            "return": "void",
+            "category": "Client",
+            "uuid": "9f6ec0e8-ecad-4ef8-8f44-294d7c3c4caf",
+            "type": "method"
+          },
+          {
+            "name": "IsActive",
+            "service": "Timeline",
+            "file": "apps/rc/client/modules/timeline/timeline.service.ts",
+            "params": [],
+            "return": "void",
+            "category": "Client",
+            "uuid": "47ddf879-b85a-43d5-80ee-232016378c2e",
+            "type": "method"
+          }
+        ],
+        "uuid": "c5e740a2-7657-43d3-ad61-fd297ca6280d",
+        "type": "service"
+      }
+    ]
+  },
+  {
+    "name": "server",
+    "_path": "apps/rc/server/modules",
+    "items": [
+      {
+        "name": "boot",
+        "items": [],
+        "uuid": "32177b7a-2323-4b31-9164-7f0ad66b5bf7",
+        "type": "service"
+      },
+      {
+        "name": "commands",
+        "items": [
+          {
+            "name": "AddCommand",
+            "service": "Commands",
+            "file": "apps/rc/server/modules/commands/commands.service.ts",
+            "params": [
+              {
+                "name": "name",
+                "type": "string",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              },
+              {
+                "name": "cb",
+                "type": "(source: number, args: unknown[]) => void",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              },
+              {
+                "name": "authFlags",
+                "type": "PermissionsFlags[]",
+                "hasDefaultValue": true,
+                "defaultValue": "[]",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Server",
+            "uuid": "43db8a9b-4eef-4057-aed4-355b85b2e8e4",
+            "type": "method"
+          }
+        ],
+        "uuid": "ee3550e5-0eaf-42d6-9649-456875616a5a",
+        "type": "service"
+      },
+      {
+        "name": "events",
+        "items": [
+          {
+            "name": "OnServerEvent",
+            "service": "Events",
+            "file": "apps/rc/server/modules/events/events.service.ts",
+            "params": [
+              {
+                "name": "eventName",
+                "type": "string",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              },
+              {
+                "name": "callback",
+                "type": "() => void",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Server",
+            "uuid": "a5859cc1-e45b-4e10-be21-71ec9c4f86ee",
+            "type": "method"
+          }
+        ],
+        "uuid": "0c57f5d4-95fe-401b-8cfb-3a0e760a34a1",
+        "type": "service"
+      },
+      {
+        "name": "items",
+        "items": [
+          {
+            "name": "RegisterUsableItem",
+            "service": "Items",
+            "file": "apps/rc/server/modules/items/items.service.ts",
+            "params": [
+              {
+                "name": "name",
+                "type": "string",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              },
+              {
+                "name": "cb",
+                "type": "() => void",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Server",
+            "uuid": "de383a1f-df53-4a90-a431-c805d5dbd52c",
+            "type": "method"
+          }
+        ],
+        "uuid": "5a6e50a6-43d1-4cbf-96d8-a0e9be1bc207",
+        "type": "service"
+      },
+      {
+        "name": "player",
+        "items": [
+          {
+            "name": "SaveAll",
+            "service": "Player",
+            "file": "apps/rc/server/modules/player/player.service.ts",
+            "params": [],
+            "return": "void",
+            "category": "Server",
+            "uuid": "2de7ee17-d74d-4b33-b4a4-ada55015eab3",
+            "type": "method"
+          },
+          {
+            "name": "GetAll",
+            "service": "Player",
+            "file": "apps/rc/server/modules/player/player.service.ts",
+            "params": [],
+            "return": "Promise<number[] | []>",
+            "category": "Server",
+            "uuid": "29d73e71-c5a7-488c-a4bd-3111f77a18f6",
+            "type": "method"
+          },
+          {
+            "name": "Get",
+            "service": "Player",
+            "file": "apps/rc/server/modules/player/player.service.ts",
+            "params": [
+              {
+                "name": "source",
+                "type": "number",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "Promise<NXPlayerMethodsCapitalized | false>",
+            "category": "Server",
+            "uuid": "dff8ec16-1a02-42f8-a4d8-fc14373d37a3",
+            "type": "method"
+          },
+          {
+            "name": "GetAllData",
+            "service": "Player",
+            "file": "apps/rc/server/modules/player/player.service.ts",
+            "params": [],
+            "return": "Promise<NXPlayer[] | []>",
+            "category": "Server",
+            "uuid": "0b80648f-b05f-4e25-b035-d6c13f69c487",
+            "type": "method"
+          },
+          {
+            "name": "GetData",
+            "service": "Player",
+            "file": "apps/rc/server/modules/player/player.service.ts",
+            "params": [
+              {
+                "name": "source",
+                "type": "number",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "Promise<NXPlayer | false>",
+            "category": "Server",
+            "uuid": "c1d14d40-084f-41f2-a505-4c999dcca71e",
+            "type": "method"
+          }
+        ],
+        "uuid": "2de46542-dfca-47c6-9a17-0174bba6428c",
+        "type": "service"
+      },
+      {
+        "name": "permissions",
+        "items": [
+          {
+            "name": "DoesGroupHasFlag",
+            "service": "Permissions",
+            "file": "apps/rc/server/modules/services/permissions.service.ts",
+            "params": [
+              {
+                "name": "object",
+                "type": "{\n    group: string\n    flag: keyof typeof PermissionsFlags\n  }",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Server",
+            "uuid": "02a06e8b-8a47-4422-92b7-a1c4aff13ede",
+            "type": "method"
+          },
+          {
+            "name": "DoesGroupHasAllFlags",
+            "service": "Permissions",
+            "file": "apps/rc/server/modules/services/permissions.service.ts",
+            "params": [
+              {
+                "name": "object",
+                "type": "{\n    group: string\n    flags: Array<keyof typeof PermissionsFlags>\n  }",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Server",
+            "uuid": "37a615c9-0797-4681-8bcb-026c5cf9df98",
+            "type": "method"
+          },
+          {
+            "name": "HasMorePermissions",
+            "service": "Permissions",
+            "file": "apps/rc/server/modules/services/permissions.service.ts",
+            "params": [
+              {
+                "name": "srcGroup",
+                "type": "string",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              },
+              {
+                "name": "targetGroup",
+                "type": "string",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false
+              }
+            ],
+            "return": "void",
+            "category": "Server",
+            "uuid": "fc6f389a-65a4-4757-ba2e-f60ea9dbe9cf",
+            "type": "method"
+          }
+        ],
+        "uuid": "a0928744-a150-43eb-8511-c49bb08d36d0",
+        "type": "service"
+      }
+    ]
+  }
+]

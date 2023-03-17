@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-
+import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from '@/components/button/Button'
 
 export default function Home() {
   return (
@@ -12,7 +14,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Hello world !</h1>
+        <div className="main__decoration"></div>
+        <div className="left">
+          <h1>Build with NX</h1>
+          <span>
+            NX is a FiveM framework, which allows users to centralize their
+            servers, so this framework manages absolutely everything that can be
+            found on servers, such as player inventories, their identity,
+            etc..., NX is a very promising framework!
+          </span>
+          <div className="buttons">
+            <Link href={'#'}>
+              <Button _type="primary">API Reference</Button>
+            </Link>
+            <Link href={'#'}>
+              <Button _type="secondary">Start creating</Button>
+            </Link>
+          </div>
+        </div>
+        <div className="right">
+          <Image
+            src="/nx/example-1.png"
+            width={475}
+            height={500}
+            alt="Example 1"
+            className="example example__1"
+          />
+          <Image
+            src="/nx/example-2.png"
+            width={475}
+            height={150}
+            alt="Example 1"
+            className="example example__2"
+          />
+        </div>
       </main>
     </>
   )

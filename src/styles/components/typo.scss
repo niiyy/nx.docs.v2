@@ -1,0 +1,55 @@
+.typo {
+  &.typo__h1 {
+    color: $--clr-font;
+    font-size: 2rem;
+  }
+
+  &.typo__h2 {
+    color: $--clr-font;
+    font-size: 1.8rem;
+  }
+
+  &.typo__h3 {
+    color: $--clr-font;
+    font-size: 1.6rem;
+  }
+
+  &.typo__h4 {
+    color: $--clr-font;
+    font-size: 1.4rem;
+  }
+
+  &.typo__h5 {
+    color: $--clr-font;
+    font-size: 1.2rem;
+  }
+
+  &.typo__h6 {
+    color: $--clr-font;
+    font-size: 1rem;
+  }
+
+  &.typo__p {
+    color: $--clr-font;
+    font-size: 1rem;
+  }
+
+  &.typo__span {
+    color: $--clr-font;
+    font-size: 1rem;
+  }
+
+  &.type__secondary {
+    color: $--clr-font-secondary;
+    font-weight: 600;
+  }
+
+  a {
+    color: $--clr-font-special;
+    transition: 0.3s;
+
+    &:hover {
+      color: $--clr-font-special-hover;
+    }
+  }
+}

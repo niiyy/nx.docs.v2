@@ -1,0 +1,53 @@
+.admonition {
+  $--error: rgb(245, 56, 56);
+  $--success: rgb(25, 211, 25);
+  $--info: rgb(0, 153, 255);
+  $--warn: rgb(255, 145, 0);
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 20px;
+  //   width: fit-content;
+
+  .admonition__content {
+    font-weight: 600;
+  }
+
+  &.warn {
+    background-color: rgba($--warn, 0.1);
+    border: 1px solid rgba($--warn, 0.4);
+
+    .typo {
+      color: rgba($--warn, 0.5);
+    }
+  }
+
+  &.error {
+    background-color: rgba($--error, 0.1);
+    border: 1px solid rgba($--error, 0.4);
+
+    .typo {
+      color: rgba($--error, 0.5);
+    }
+  }
+
+  &.success {
+    background-color: rgba($--success, 0.1);
+    border: 1px solid rgba($--success, 0.4);
+
+    .typo {
+      color: rgba($--success, 0.5);
+    }
+  }
+
+  &.info {
+    background-color: rgba($--info, 0.1);
+    border: 1px solid rgba($--info, 0.4);
+
+    .typo {
+      color: rgba($--info, 0.5);
+    }
+  }
+}

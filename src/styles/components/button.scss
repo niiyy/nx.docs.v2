@@ -1,0 +1,33 @@
+.btn {
+  padding: 20px 45px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:active {
+    scale: 0.95;
+  }
+
+  &.primary {
+    background-color: red;
+    border: 1px solid rgba(red, 0);
+
+    &:hover {
+      background-color: rgb(133, 18, 18);
+    }
+  }
+
+  &.secondary {
+    background-color: rgba(red, 0.1);
+    border: 1px solid red;
+
+    &:hover {
+      background-color: rgba(red, 0.3);
+    }
+  }
+}
