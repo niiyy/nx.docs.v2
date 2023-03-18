@@ -16,6 +16,7 @@ stop basic-gamemode`
 
   return (
     <ViewLayout>
+      <Typography variant="h1">Welcome 👋</Typography>
       <FlexColumn style={{ alignItems: 'center' }}>
         <Image src="/welcome.svg" height="750" width="750" alt="welcome" />
       </FlexColumn>
@@ -23,11 +24,6 @@ stop basic-gamemode`
         <FlexColumn style={{ gap: 10 }}>
           <Typography type="secondary" variant="span">
             Welcome to NX, the opensource Framework for FiveM.
-          </Typography>
-          <Typography type="secondary" variant="span">
-            Click here <Link href="#">Source Code</Link> to download the source
-            code or visit <Link href="#">Realese</Link> to the download the
-            latest version.
           </Typography>
         </FlexColumn>
 
@@ -37,6 +33,11 @@ stop basic-gamemode`
           title="Information"
           content="The Framework is still under development so updates may be released regularly."
         />
+        <Typography type="secondary" variant="span">
+          Click here <Link href="#">Source Code</Link> to download the source
+          code or visit <Link href="#">Realese</Link> to the download the latest
+          version.
+        </Typography>
         <Typography variant="h1">Requirements</Typography>
 
         <FlexColumn style={{ gap: 10 }}>

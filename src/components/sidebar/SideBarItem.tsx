@@ -18,7 +18,7 @@ const SubItem = (data: ISubItem) => {
   const [value, setValue] = useSideBarState()
 
   const handleSwitchView = () => {
-    setValue(data)
+    setValue({ ...data, __type: 'method' })
   }
 
   return (

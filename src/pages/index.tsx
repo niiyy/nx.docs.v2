@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/button/Button'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -15,8 +16,12 @@ export default function Home() {
       </Head>
       <main>
         <div className="main__decoration"></div>
-        <div className="left">
-          <h1>Build with NX</h1>
+        <motion.div
+          animate={{ x: 0 }}
+          initial={{ x: '-100vw' }}
+          className="left"
+        >
+          <motion.h1>Build with NX</motion.h1>
           <span>
             NX is a FiveM framework, which allows users to centralize their
             servers, so this framework manages absolutely everything that can be
@@ -31,22 +36,30 @@ export default function Home() {
               <Button _type="secondary">Start creating</Button>
             </Link>
           </div>
-        </div>
+        </motion.div>
         <div className="right">
-          <Image
-            src="/nx/example-1.png"
-            width={475}
-            height={500}
-            alt="Example 1"
-            className="example example__1"
-          />
-          <Image
-            src="/nx/example-2.png"
-            width={475}
-            height={150}
-            alt="Example 1"
-            className="example example__2"
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Image
+              src="/nx/example-1.png"
+              width={475}
+              height={500}
+              alt="Example 1"
+              className="example example__1"
+            />
+          </motion.div>
+          <motion.div animate={{ scale: 1 }} initial={{ scale: 0 }}>
+            <Image
+              src="/nx/example-2.png"
+              width={475}
+              height={150}
+              alt="Example 1"
+              className="example example__2"
+            />
+          </motion.div>
         </div>
       </main>
     </>

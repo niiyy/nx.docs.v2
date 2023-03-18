@@ -1,0 +1,42 @@
+.table__wrapper {
+  border: 1px solid #3a3f42;
+  border-radius: 15px;
+  overflow: auto hidden;
+  margin-bottom: 16px;
+
+  table {
+    font-size: 0.875rem;
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    table-layout: fixed;
+
+    thead {
+      background-color: #49434363;
+
+      tr {
+        th {
+          padding: 16px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          vertical-align: middle;
+          border-right: 1px solid 1px solid #3a3f42;
+          text-align: left;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 16px;
+          vertical-align: middle;
+          border-right: 1px solid #3a3f42;
+          text-align: left;
+          color: $--clr-font-secondary;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

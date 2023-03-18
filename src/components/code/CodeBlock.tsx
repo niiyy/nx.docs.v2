@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useState } from 'react'
+import React, { PropsWithChildren, useEffect, useRef, useState } from 'react'
 import { Copy } from '../icons/Copy'
 import { Typography } from '../typography/Typography'
 
@@ -12,6 +12,7 @@ const CodeBlock = (props: PropsWithChildren<ICodeBlock>) => {
   const [activeTimeout, setActiveTimeout] = useState<NodeJS.Timeout | null>(
     null,
   )
+  const codeRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     if (copySucces) {
@@ -28,6 +29,11 @@ const CodeBlock = (props: PropsWithChildren<ICodeBlock>) => {
     }
   }, [copySucces])
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(children as string)
+    setCopySucces(true)
+  }
+
   return (
     <div className="codeblock">
       {title && (
@@ -38,13 +44,13 @@ const CodeBlock = (props: PropsWithChildren<ICodeBlock>) => {
 
       <div className="codeblock__body">
         <button
-          onClick={() => setCopySucces(true)}
+          onClick={handleCopy}
           className={`copy__code ${copySucces ? '--active' : ''}`}
         >
-          <Copy _color="#555356" />
+          {copySucces ? 'Copied' : 'Copy'} <Copy _color="#555356" />
         </button>
         <pre>
-          <code>{children}</code>
+          <code ref={codeRef}>{children}</code>
         </pre>
       </div>
     </div>
