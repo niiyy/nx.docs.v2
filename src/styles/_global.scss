@@ -16,3 +16,18 @@
 ::-webkit-scrollbar-thumb {
   background: #ffffff;
 }
+
+.code__item {
+  background-color: rgb(255, 255, 255, 0.04);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  background: 0 0;
+  border: 0;
+  white-space: pre-wrap;
+}

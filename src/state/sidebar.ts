@@ -4,7 +4,7 @@ import { atom, useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
 
 const sideBarState = atom<any>({
   key: StateKey.SIDEBAR,
-  default: null,
+  default: 'installation',
 })
 
 const exportedMethods = atom<any[]>({

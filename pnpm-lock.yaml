@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': 18.15.3
+  '@types/prismjs': ^1.26.0
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@types/react-syntax-highlighter': ^15.5.6
@@ -9,6 +10,7 @@ specifiers:
   next: 13.2.4
   nord: ^0.2.1
   prettier: ^2.8.4
+  prismjs: ^1.29.0
   react: 18.2.0
   react-dom: 18.2.0
   react-syntax-highlighter: ^15.5.0
@@ -23,6 +25,7 @@ dependencies:
   framer-motion: 10.6.0_biqbaboplfbrettd7655fr4n2y
   next: 13.2.4_dpxg4zawgzznnxdt7it3f5d76m
   nord: 0.2.1
+  prismjs: 1.29.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-syntax-highlighter: 15.5.0_react@18.2.0
@@ -30,6 +33,7 @@ dependencies:
   typescript: 5.0.2
 
 devDependencies:
+  '@types/prismjs': 1.26.0
   '@types/react-syntax-highlighter': 15.5.6
   prettier: 2.8.4
   sass: 1.59.3
@@ -251,6 +255,13 @@ packages:
         integrity: sha512-p6ua9zBxz5otCmbpb5D3U4B5Nanw6Pk3PPyX05xnxbB/fRv71N7CPmORg7uAD5P70T0xmx1pzAx/FUfa5X+3cw==,
       }
     dev: false
+
+  /@types/prismjs/1.26.0:
+    resolution:
+      {
+        integrity: sha512-ZTaqn/qSqUuAq1YwvOFQfVW1AR/oQJlLSZVustdjwI+GZ8kr0MSHBj0tsXPW1EqHubx50gtBEjbPGsdZwQwCjQ==,
+      }
+    dev: true
 
   /@types/prop-types/15.7.5:
     resolution:

@@ -6,6 +6,8 @@
   flex-direction: column;
   gap: 10px;
   position: relative;
+  width: 100%;
+  overflow-y: scroll;
 
   .codeblock__body {
     color: #8d8585;

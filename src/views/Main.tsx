@@ -4,6 +4,7 @@ import { Typography } from '@/components/typography/Typography'
 import { FlexColumn } from '@/layouts/FlexLayout'
 import { useSideBarState, useSideBarValue } from '@/state/sidebar'
 import React from 'react'
+import { Developement } from './Developement'
 import { useMethodsService } from './hooks/useMethodsService'
 import { Installation } from './Installation'
 
@@ -14,6 +15,7 @@ const Main = () => {
   return (
     <div className="views__wrapper">
       {data === 'installation' && <Installation />}
+      {data === 'developement' && <Developement />}
       {data?.__type === 'method' && (
         <FlexColumn style={{ gap: 50 }}>
           <FlexColumn style={{ gap: 20 }}>

@@ -103,3 +103,9 @@ main {
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .welcome-img {
+    width: 100%;
+  }
+}

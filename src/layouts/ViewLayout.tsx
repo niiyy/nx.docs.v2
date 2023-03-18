@@ -4,7 +4,7 @@ const ViewLayout = forwardRef((props: PropsWithChildren) => {
   const { children, ...rest } = props
   return (
     <section
-      style={{ display: 'flex', flexDirection: 'column', gap: 5 }}
+      style={{ display: 'flex', flexDirection: 'column', gap: 20 }}
       {...rest}
     >
       {children}

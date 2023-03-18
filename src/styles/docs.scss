@@ -68,3 +68,17 @@
     padding: 10px;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .docs {
+    nav {
+      display: none;
+    }
+  }
+
+  .main__header {
+    .input__wrapper {
+      display: none;
+    }
+  }
+}

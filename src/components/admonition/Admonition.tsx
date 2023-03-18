@@ -6,12 +6,14 @@ export type IAdmonitionVariants = 'error' | 'success' | 'info' | 'warn'
 export interface IAdmonition {
   variant: IAdmonitionVariants
   title?: string
-  content?: string
 }
 
 const Admonition = forwardRef(
-  (props: IAdmonition, ref: ForwardedRef<HTMLDivElement>) => {
-    const { title, content, variant } = props
+  (
+    props: PropsWithChildren<IAdmonition>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => {
+    const { title, variant, children } = props
 
     return (
       <div ref={ref} className={`admonition ${variant}`}>
@@ -19,7 +21,7 @@ const Admonition = forwardRef(
           {title}
         </Typography>
         <Typography className="admonition__content" variant="span">
-          {content}
+          {children}
         </Typography>
       </div>
     )

@@ -1,0 +1,23 @@
+ul.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  li {
+    position: relative;
+    margin-left: 20px;
+    color: $--clr-font-special;
+    font-weight: 700;
+
+    &::before {
+      content: '\2022';
+      color: $--clr-font-special;
+      position: absolute;
+      translate: -50% -50%;
+      top: 50%;
+      left: -10px;
+      border-radius: 50%;
+    }
+  }
+}
