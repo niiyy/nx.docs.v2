@@ -10,7 +10,9 @@ const Header = () => {
   return (
     <header className="main__header not__full">
       <div className="left">
-        <Image src="/nx/logo.svg" width={50} height={50} alt="Logo" />
+        <Link href="/">
+          <Image src="/nx/logo.svg" width={50} height={50} alt="Logo" />
+        </Link>
       </div>
       <Input
         icon={<Search _color="#242424" />}

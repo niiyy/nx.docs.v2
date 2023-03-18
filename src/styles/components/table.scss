@@ -9,7 +9,8 @@
     width: 100%;
     border-collapse: collapse;
     color: white;
-    table-layout: fixed;
+    // table-layout: fixed;
+    white-space: nowrap;
 
     thead {
       background-color: #49434363;

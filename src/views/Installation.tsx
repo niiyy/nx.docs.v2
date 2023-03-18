@@ -17,7 +17,7 @@ stop basic-gamemode`
 
   return (
     <ViewLayout>
-      <Typography variant="h1">Welcome 👋</Typography>
+      <Typography variant="h1">Installation</Typography>
       <FlexColumn style={{ alignItems: 'center' }}>
         <img
           className="welcome-img"

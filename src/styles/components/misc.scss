@@ -1,0 +1,26 @@
+.link__card {
+  display: flex;
+  padding: 15px;
+  border: 1px solid #3a3f42;
+  gap: 20px;
+  border-radius: 15px;
+  position: relative;
+
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    img,
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+}

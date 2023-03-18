@@ -20,4 +20,4 @@ const FlexLayout = (props: PropsWithChildren<IFlexLayout>) => {
   )
 }
 
-export { FlexColumn }
+export { FlexColumn, FlexLayout }

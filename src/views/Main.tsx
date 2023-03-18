@@ -7,6 +7,7 @@ import React from 'react'
 import { Developement } from './Developement'
 import { useMethodsService } from './hooks/useMethodsService'
 import { Installation } from './Installation'
+import { Welcome } from './Welcome'
 
 const Main = () => {
   const data = useSideBarValue()
@@ -16,6 +17,8 @@ const Main = () => {
     <div className="views__wrapper">
       {data === 'installation' && <Installation />}
       {data === 'developement' && <Developement />}
+      {data === 'welcome' && <Welcome />}
+
       {data?.__type === 'method' && (
         <FlexColumn style={{ gap: 50 }}>
           <FlexColumn style={{ gap: 20 }}>
