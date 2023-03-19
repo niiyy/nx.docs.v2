@@ -114,12 +114,23 @@ main {
 
 @media screen and (max-width: 550px) {
   main {
+    .left {
+      margin-top: 300px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .main__title {
+        font-size: 30px !important;
+      }
+    }
     .right {
       div {
         width: 100%;
-
         img {
-          width: 100%;
+          width: auto;
+          height: auto;
         }
       }
     }
@@ -158,6 +169,11 @@ main {
       align-items: center;
       justify-content: center;
       z-index: 99;
+      margin-top: 10px;
+
+      img {
+        opacity: 0.5;
+      }
 
       div {
         &:nth-child(2) {

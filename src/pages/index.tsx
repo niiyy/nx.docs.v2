@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/button/Button'
 import { motion } from 'framer-motion'
+import { Header } from '@/components/header/Header'
+import { Typography } from '@/components/typography/Typography'
 
 export default function Home() {
   return (
@@ -14,61 +16,80 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/nx/logo.svg" />
       </Head>
-      <main>
-        <div className="main__decoration"></div>
-        <motion.div
-          animate={{ x: 0 }}
-          initial={{ x: '-100vw' }}
-          className="left"
-        >
-          <motion.h1
-            transition={{ duration: 1 }}
-            whileHover={{
-              backgroundImage: 'linear-gradient(45deg, #ff6600, #ff6600)',
-            }}
-          >
-            Build with NX
-          </motion.h1>
-          <span>
-            NX is a FiveM framework, which allows users to centralize their
-            servers, so this framework manages absolutely everything that can be
-            found on servers, such as player inventories, their identity,
-            etc..., NX is a very promising framework!
-          </span>
-          <div className="buttons">
-            <Link href={'/docs'}>
-              <Button _type="primary">API Reference</Button>
-            </Link>
-            <Link href={'/docs?view=developement'}>
-              <Button _type="secondary">Start creating</Button>
-            </Link>
-          </div>
-        </motion.div>
-        <div className="right">
+      <>
+        <Header />
+        <main>
+          <div className="main__decoration"></div>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            animate={{ x: 0 }}
+            initial={{ x: '-100vw' }}
+            className="left"
           >
-            <Image
-              src="/nx/example-1.png"
-              width={475}
-              height={500}
-              alt="Example 1"
-              className="example example__1"
-            />
+            <Typography
+              style={{
+                backgroundColor: '#30303080',
+                width: 'fit-content',
+                padding: 10,
+                borderRadius: 5,
+                border: '1px solid #00FF0030',
+                color: '#00FF0070',
+              }}
+              type="secondary"
+              className="beta"
+              variant="p"
+            >
+              This documentaion is under developement
+            </Typography>
+            <motion.h1
+              className="main__title"
+              transition={{ duration: 1 }}
+              whileHover={{
+                backgroundImage: 'linear-gradient(45deg, #ff6600, #ff6600)',
+              }}
+            >
+              Build with NX
+            </motion.h1>
+            <span>
+              NX is a FiveM framework, which allows users to centralize their
+              servers, so this framework manages absolutely everything that can
+              be found on servers, such as player inventories, their identity,
+              etc..., NX is a very promising framework!
+            </span>
+            <div className="buttons">
+              <Link href={'/docs'}>
+                <Button _type="primary">API Reference</Button>
+              </Link>
+              <Link href={'/docs?view=developement'}>
+                <Button _type="secondary">Start creating</Button>
+              </Link>
+            </div>
           </motion.div>
-          <motion.div animate={{ scale: 1 }} initial={{ scale: 0 }}>
-            <Image
-              src="/nx/example-2.png"
-              width={475}
-              height={150}
-              alt="Example 1"
-              className="example example__2"
-            />
-          </motion.div>
-        </div>
-      </main>
+          <div className="right">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <Image
+                src="/nx/example-1.png"
+                width={475}
+                height={500}
+                alt="Example 1"
+                className="example example__1"
+              />
+            </motion.div>
+            <motion.div animate={{ scale: 1 }} initial={{ scale: 0 }}>
+              <Image
+                src="/nx/example-2.png"
+                width={475}
+                height={150}
+                alt="Example 1"
+                className="example example__2"
+              />
+            </motion.div>
+          </div>
+        </main>
+      </>
     </>
   )
 }

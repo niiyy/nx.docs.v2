@@ -16,7 +16,7 @@ export interface ITypography {
   variant: ITypographyVariants
   className?: string
   type?: 'secondary' | 'primary'
-  style?: Record<string | number | symbol, CSSProperties>
+  style?: Record<any, any>
 }
 
 const Typography = forwardRef(

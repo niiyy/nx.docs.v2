@@ -6,13 +6,12 @@
 
   nav {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
     width: 300px;
     gap: 5px;
     position: fixed;
     transition: 0.3s;
-
+    overflow-y: scroll;
+    max-height: calc(100vh - $--misc-header-height);
     // background-color: gold;
 
     .sidebar__item {
@@ -48,9 +47,9 @@
 
       &.selected {
         color: $--clr-font-special;
-        background-color: rgb(41, 40, 40);
+        // background-color: rgb(41, 40, 40);
         border-radius: 5px;
-        padding: 5px;
+        // padding: 5px;
       }
 
       &:not(:is(.selected)):hover {
@@ -104,12 +103,6 @@
     .docs__content {
       margin-left: 0;
       padding: 3px;
-    }
-  }
-
-  .main__header {
-    .input__wrapper {
-      display: none;
     }
   }
 }

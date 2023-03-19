@@ -1,0 +1,29 @@
+footer {
+  min-height: 400px;
+  display: flex;
+  margin-top: 100px;
+  color: white;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+  border-top: 1px solid #303030;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .top {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+
+    .category {
+      display: flex;
+    }
+  }
+
+  .bottom {
+    background-color: grey;
+  }
+}

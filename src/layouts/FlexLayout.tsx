@@ -14,7 +14,7 @@ const FlexColumn = (props: PropsWithChildren<IFlexLayout>) => {
 const FlexLayout = (props: PropsWithChildren<IFlexLayout>) => {
   const { children, style, ...rest } = props
   return (
-    <div {...rest} style={{ ...style, display: 'flex' }}>
+    <div style={{ ...style, display: 'flex' }} {...rest}>
       {children}
     </div>
   )
