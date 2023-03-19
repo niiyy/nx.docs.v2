@@ -20,7 +20,7 @@ const LinkIcon = (props: ILink) => {
           id="Icon"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="2"
+          strokeWidth="2"
           d="M7 17L17 7M17 7H7M17 7V17"
           stroke={_color}
         ></path>

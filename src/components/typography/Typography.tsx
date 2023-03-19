@@ -1,8 +1,8 @@
 import { cls } from '@/utils/cls'
 import React, {
   CSSProperties,
+  ForwardedRef,
   forwardRef,
-  HTMLAttributes,
   PropsWithChildren,
 } from 'react'
 
@@ -19,74 +19,118 @@ export interface ITypography {
   style?: Record<string | number | symbol, CSSProperties>
 }
 
-const Typography = forwardRef((props: PropsWithChildren<ITypography>) => {
-  const { variant, children, className, type = 'primary', style } = props
+const Typography = forwardRef(
+  (
+    props: PropsWithChildren<ITypography>,
+    ref: ForwardedRef<
+      HTMLHeadingElement | HTMLParagraphElement | HTMLSpanElement
+    >,
+  ) => {
+    const { variant, children, className, type = 'primary', style } = props
 
-  const _className = cls('typo', `typo__${variant}`, className, `type__${type}`)
+    const _className = cls(
+      'typo',
+      `typo__${variant}`,
+      className,
+      `type__${type}`,
+    )
 
-  if (variant === 'h1') {
-    return (
-      <h1 style={style} className={_className}>
-        {children}
-      </h1>
-    )
-  }
+    if (variant === 'h1') {
+      return (
+        <h1
+          ref={ref as ForwardedRef<HTMLHeadingElement>}
+          style={style}
+          className={_className}
+        >
+          {children}
+        </h1>
+      )
+    }
 
-  if (variant === 'h2') {
-    return (
-      <h2 style={style} className={_className}>
-        {children}
-      </h2>
-    )
-  }
+    if (variant === 'h2') {
+      return (
+        <h2
+          ref={ref as ForwardedRef<HTMLHeadingElement>}
+          style={style}
+          className={_className}
+        >
+          {children}
+        </h2>
+      )
+    }
 
-  if (variant === 'h3') {
-    return (
-      <h3 style={style} className={_className}>
-        {children}
-      </h3>
-    )
-  }
+    if (variant === 'h3') {
+      return (
+        <h3
+          ref={ref as ForwardedRef<HTMLHeadingElement>}
+          style={style}
+          className={_className}
+        >
+          {children}
+        </h3>
+      )
+    }
 
-  if (variant === 'h4') {
-    return (
-      <h4 style={style} className={_className}>
-        {children}
-      </h4>
-    )
-  }
+    if (variant === 'h4') {
+      return (
+        <h4
+          ref={ref as ForwardedRef<HTMLHeadingElement>}
+          style={style}
+          className={_className}
+        >
+          {children}
+        </h4>
+      )
+    }
 
-  if (variant === 'h5') {
-    return (
-      <h5 style={style} className={_className}>
-        {children}
-      </h5>
-    )
-  }
-  if (variant === 'h6') {
-    return (
-      <h6 style={style} className={_className}>
-        {children}
-      </h6>
-    )
-  }
-  if (variant === 'p') {
-    return (
-      <p style={style} className={_className}>
-        {children}
-      </p>
-    )
-  }
+    if (variant === 'h5') {
+      return (
+        <h5
+          ref={ref as ForwardedRef<HTMLHeadingElement>}
+          style={style}
+          className={_className}
+        >
+          {children}
+        </h5>
+      )
+    }
+    if (variant === 'h6') {
+      return (
+        <h6
+          ref={ref as ForwardedRef<HTMLHeadingElement>}
+          style={style}
+          className={_className}
+        >
+          {children}
+        </h6>
+      )
+    }
+    if (variant === 'p') {
+      return (
+        <p
+          ref={ref as ForwardedRef<HTMLParagraphElement>}
+          style={style}
+          className={_className}
+        >
+          {children}
+        </p>
+      )
+    }
 
-  if (variant === 'span') {
-    return (
-      <span style={style} className={_className}>
-        {children}
-      </span>
-    )
-  }
+    if (variant === 'span') {
+      return (
+        <span
+          ref={ref as ForwardedRef<HTMLSpanElement>}
+          style={style}
+          className={_className}
+        >
+          {children}
+        </span>
+      )
+    }
 
-  return null
-})
+    return null
+  },
+)
 
 export { Typography }

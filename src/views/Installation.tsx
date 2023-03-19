@@ -56,6 +56,7 @@ stop basic-gamemode`
           <Admonition variant="warn" title="Warning">
             You have to stop basic-gamemod
           </Admonition>
+
           <CodeBlock>{codeString}</CodeBlock>
         </FlexColumn>
       </FlexColumn>

@@ -1,13 +1,15 @@
+import Prism from 'prismjs'
 import React, { PropsWithChildren, useEffect, useRef, useState } from 'react'
 import { Copy } from '../icons/Copy'
 import { Typography } from '../typography/Typography'
 
 export interface ICodeBlock {
   title?: string
+  language?: string
 }
 
 const CodeBlock = (props: PropsWithChildren<ICodeBlock>) => {
-  const { children, title } = props
+  const { children, title, language = 'js' } = props
   const [copySucces, setCopySucces] = useState(false)
   const [activeTimeout, setActiveTimeout] = useState<NodeJS.Timeout | null>(
     null,
@@ -34,6 +36,12 @@ const CodeBlock = (props: PropsWithChildren<ICodeBlock>) => {
     setCopySucces(true)
   }
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      Prism.highlightAll()
+    }
+  }, [children, language])
+
   return (
     <div className="codeblock">
       {title && (
@@ -50,7 +58,9 @@ const CodeBlock = (props: PropsWithChildren<ICodeBlock>) => {
           {copySucces ? 'Copied' : 'Copy'} <Copy _color="#555356" />
         </button>
         <pre>
-          <code ref={codeRef}>{children}</code>
+          <code className={`language-${language}`} ref={codeRef}>
+            {children}
+          </code>
         </pre>
       </div>
     </div>

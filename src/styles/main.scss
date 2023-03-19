@@ -25,6 +25,7 @@ main {
   background-image: linear-gradient(#303030 1px, transparent 1px),
     linear-gradient(to right, #303030 1px, transparent 1px);
   background-size: 100px 100px;
+  margin-top: $--misc-header-height;
 
   &::after {
     content: '';
@@ -55,6 +56,7 @@ main {
   .left,
   .right {
     margin-top: 175px;
+    z-index: 99;
   }
 
   .left {
@@ -107,5 +109,61 @@ main {
 @media screen and (max-width: 1000px) {
   .welcome-img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main {
+    .right {
+      div {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  main {
+    flex-direction: column;
+    gap: 0;
+    padding: 5px;
+
+    .left {
+      width: 100%;
+      padding: 5px;
+
+      span {
+        width: 100%;
+      }
+      .buttons {
+        flex-direction: column;
+        width: 100%;
+        // padding: 20px;
+
+        a,
+        .btn {
+          flex: 1;
+          width: 100%;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        &:nth-child(2) {
+          top: 100% !important;
+          left: 50% !important;
+        }
+      }
+    }
   }
 }

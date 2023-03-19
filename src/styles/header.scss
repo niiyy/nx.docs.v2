@@ -1,8 +1,51 @@
+// header.main__header {
+//   display: flex;
+//   align-items: center;
+//   height: $--misc-header-height;
+//   justify-content: space-between;
+//   position: sticky;
+
+//   .input__wrapper {
+//     width: 600px;
+//   }
+
+//   .right {
+//     .links {
+//       display: flex;
+//       gap: 10px;
+
+//       a {
+//         &:hover {
+//           svg {
+//             path {
+//               fill: rgb(133, 125, 125);
+//             }
+//           }
+//         }
+
+//         svg {
+//           path {
+//             fill: rgb(85, 79, 79);
+//             transition: 0.3s;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
 header.main__header {
   display: flex;
   align-items: center;
   height: $--misc-header-height;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  // background-color: #ffffff;
+  background-color: $--clr-bg-primary;
 
   .input__wrapper {
     width: 600px;

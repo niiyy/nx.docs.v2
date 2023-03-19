@@ -1,14 +1,14 @@
 .admonition {
   $--error: rgb(245, 56, 56);
-  $--success: rgb(25, 211, 25);
-  $--info: rgb(0, 153, 255);
-  $--warn: rgb(255, 145, 0);
+  $--success: rgb(84, 211, 25);
+  $--info: rgb(0, 234, 255);
+  $--warn: rgb(255, 196, 0);
 
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border-radius: 15px;
+  border-radius: 10px;
   //   width: fit-content;
 
   .admonition__content {
@@ -16,7 +16,7 @@
   }
 
   &.warn {
-    background-color: rgba($--warn, 0.1);
+    background-color: rgba($--warn, 0.05);
     border: 1px solid rgba($--warn, 0.4);
 
     .typo {
@@ -25,7 +25,7 @@
   }
 
   &.error {
-    background-color: rgba($--error, 0.1);
+    background-color: rgba($--error, 0.05);
     border: 1px solid rgba($--error, 0.4);
 
     .typo {
@@ -34,7 +34,7 @@
   }
 
   &.success {
-    background-color: rgba($--success, 0.1);
+    background-color: rgba($--success, 0.05);
     border: 1px solid rgba($--success, 0.4);
 
     .typo {
@@ -43,7 +43,7 @@
   }
 
   &.info {
-    background-color: rgba($--info, 0.1);
+    background-color: rgba($--info, 0.05);
     border: 1px solid rgba($--info, 0.4);
 
     .typo {

@@ -18,7 +18,7 @@ const ArgumentsTable = forwardRef(
 
     return (
       <div className="table__wrapper">
-        <table {...rest}>
+        <table ref={ref} {...rest}>
           <thead>
             <tr>
               {Object.keys(_arguments[0]).map((key) => (
