@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { DropDown } from '../dropdown/DropDown'
 import { Discord } from '../icons/Discord'
 import { GitHub } from '../icons/GitHub'
 import { Search } from '../icons/Search'
@@ -21,10 +22,10 @@ const Header = () => {
       />
       <div className="right">
         <div className="links">
-          <Link href="#">
+          <Link target="_blank" href="https://discord.gg/d6pRBjBUyn">
             <Discord width={25} />
           </Link>
-          <Link href="#">
+          <Link target="_blank" href="https://github.com/niiyy/NX">
             <GitHub width={25} />
           </Link>
         </div>

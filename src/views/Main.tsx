@@ -30,6 +30,9 @@ const Main = () => {
           <FlexColumn style={{ gap: 5 }}>
             <Typography variant="h2">{data.name}</Typography>
             <CodeBlock>{getMethodCallExample(data)}</CodeBlock>
+            <Typography type="secondary" variant="span">
+              Returns: <code className="code__item">{data.return}</code>
+            </Typography>
             <Link
               className="declaration__file"
               href={`https://github.com/niiyy/NX/tree/main/${data.file}`}

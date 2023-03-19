@@ -14,6 +14,12 @@ const SideBar = () => {
   return (
     <nav className="sidebar">
       <p
+        onClick={() => setValue('welcome')}
+        className={`link ${value === 'welcome' ? 'selected' : ''}`}
+      >
+        Welcome
+      </p>
+      <p
         onClick={() => setValue('installation')}
         className={`link ${value === 'installation' ? 'selected' : ''}`}
       >
@@ -25,12 +31,7 @@ const SideBar = () => {
       >
         Developpement
       </p>
-      <p
-        onClick={() => setValue('welcome')}
-        className={`link ${value === 'welcome' ? 'selected' : ''}`}
-      >
-        Welcome
-      </p>
+
       <SideBarItem items={[...methods]} name="API" />
     </nav>
   )
