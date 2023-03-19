@@ -1,5 +1,6 @@
 import LinkCard from '@/components/card/LinkCard'
 import { Discord } from '@/components/icons/Discord'
+import { GitHub } from '@/components/icons/GitHub'
 import { Typography } from '@/components/typography/Typography'
 import { FlexColumn, FlexLayout } from '@/layouts/FlexLayout'
 import ViewLayout from '@/layouts/ViewLayout'
@@ -56,8 +57,8 @@ const Welcome = () => {
               style={{
                 flex: 1,
               }}
-              href="#"
-              description="qzdqdqdqzdhjqzhd ,qzdyh,qdh,qzdyh,qzd yh,qd, "
+              href="https://discord.gg/d6pRBjBUyn"
+              description="Join the Discord and chat with other NX users."
               img={<Discord width={30} _color="white" />}
               title="Discord"
               imgBG="rgb(49, 49, 232)"
@@ -67,10 +68,10 @@ const Welcome = () => {
                 flex: 1,
               }}
               href="#"
-              description="qzdqdqdqzdhjqzhd ,qzdyh,qdh,qzdyh,qzd yh,qd, "
-              img={<Discord width={30} _color="white" />}
-              title="Discord"
-              imgBG="rgb(49, 49, 232)"
+              description="View source code, submit a PR, or report an issue."
+              img={<GitHub width={30} _color="white" />}
+              title="GitHub"
+              imgBG="hsl(206, 6.0%, 43.5%)"
             />
           </FlexLayout>
         </FlexColumn>

@@ -20,7 +20,7 @@ const LinkCard = ({
   ...rest
 }: ILinkCard) => {
   return (
-    <Link href={href} {...rest}>
+    <Link href={href} target="_blank" {...rest}>
       <div className="link__card">
         <div
           style={{

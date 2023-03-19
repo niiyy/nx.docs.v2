@@ -163,12 +163,6 @@
         "type": "service"
       },
       {
-        "name": "player",
-        "items": [],
-        "uuid": "1356771c-367e-4982-848e-4a43ae0e9271",
-        "type": "service"
-      },
-      {
         "name": "timeline",
         "items": [
           {
@@ -237,12 +231,6 @@
     "name": "server",
     "_path": "apps/rc/server/modules",
     "items": [
-      {
-        "name": "boot",
-        "items": [],
-        "uuid": "32177b7a-2323-4b31-9164-7f0ad66b5bf7",
-        "type": "service"
-      },
       {
         "name": "commands",
         "items": [

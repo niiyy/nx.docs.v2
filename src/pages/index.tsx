@@ -38,7 +38,7 @@ export default function Home() {
               className="beta"
               variant="p"
             >
-              This documentaion is under developement
+              This documentation is under developement
             </Typography>
             <motion.h1
               className="main__title"
