@@ -31,8 +31,8 @@ export default function Home() {
                 width: 'fit-content',
                 padding: 10,
                 borderRadius: 5,
-                border: '1px solid #00FF0030',
-                color: '#00FF0070',
+                border: '1px solid #a89532',
+                color: '#a89532',
               }}
               type="secondary"
               className="beta"
