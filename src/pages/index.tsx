@@ -53,7 +53,7 @@ export default function Home() {
               NX is a FiveM framework, which allows users to centralize their
               servers, so this framework manages absolutely everything that can
               be found on servers, such as player inventories, their identity,
-              etc..., NX is a very promising framework!
+              etc...
             </span>
             <div className="buttons">
               <Link href={'/docs'}>

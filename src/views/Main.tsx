@@ -26,23 +26,35 @@ const Main = () => {
       {data === 'welcome' && <Welcome />}
 
       {data?.__type === 'method' && (
-        <FlexColumn className="method__wrapper" style={{ gap: 50 }}>
-          <FlexColumn style={{ gap: 5 }}>
+        <FlexColumn className="method__wrapper" style={{ gap: 30 }}>
+          <FlexColumn style={{ gap: 15 }}>
             <Typography variant="h2">{data.name}</Typography>
-            <CodeBlock>{getMethodCallExample(data)}</CodeBlock>
-            <Typography type="secondary" variant="span">
-              Returns: <code className="code__item">{data.return}</code>
+            <Typography type="secondary" variant="p">
+              {data.description}
             </Typography>
-            <Link
-              className="declaration__file"
-              href={`https://github.com/niiyy/NX/tree/main/${data.file}`}
-              target="_blank"
+
+            <CodeBlock>{getMethodCallExample(data)}</CodeBlock>
+            <FlexColumn
+              style={{
+                gap: 10,
+              }}
             >
               <Typography type="secondary" variant="span">
-                {data.file}
+                Returns: <code className="code__item">{data.return.type}</code>
               </Typography>
-            </Link>
+              <Typography type="secondary" variant="span">
+                {data.return.comment}
+              </Typography>
+            </FlexColumn>
           </FlexColumn>
+          {data.examples.length !== 0 && (
+            <FlexColumn>
+              <Typography variant="h4">Examples</Typography>
+              {data.examples.map((example: string) => (
+                <CodeBlock>{example}</CodeBlock>
+              ))}
+            </FlexColumn>
+          )}
           {data.params.length !== 0 ? (
             <FlexColumn style={{ gap: 10 }}>
               <Typography variant="h4">Arguments</Typography>
@@ -53,6 +65,24 @@ const Main = () => {
               No arguments
             </Typography>
           )}
+          <FlexColumn
+            style={{
+              gap: 5,
+            }}
+          >
+            <Typography type="secondary" variant="h6">
+              Declaration file
+            </Typography>
+            <Link
+              className="declaration__file"
+              href={`https://github.com/niiyy/NX/tree/main/${data.file}#L${data.line}`}
+              target="_blank"
+            >
+              <Typography type="secondary" variant="span">
+                {data.file}#L{data.line}
+              </Typography>
+            </Link>
+          </FlexColumn>
           {/* {JSON.stringify(data)} */}
         </FlexColumn>
       )}

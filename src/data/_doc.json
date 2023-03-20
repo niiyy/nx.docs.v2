@@ -16,30 +16,41 @@
                 "type": "string",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The event name to trigger"
               },
               {
                 "name": "callback",
                 "type": "(...args: unknown[]) => void",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The callback that well be executed when the server responds"
               },
               {
                 "name": "args",
                 "type": "unknown[]",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "Array that contains all the args to pass to the server event"
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Client",
-            "uuid": "5aa1b579-e690-43ee-9a63-c588d93240b8",
-            "type": "method"
+            "uuid": "e4181eb0-5dd0-44ed-a837-411bc0d4d7fe",
+            "type": "method",
+            "line": 20,
+            "description": "This will emit a server event previously declared with OnServerEvent",
+            "examples": [
+              "EmitServerEvent('NX::sayHelloWorld', ( ) => console.log('Server responds'), ['ARG1'])"
+            ]
           }
         ],
-        "uuid": "2fcb0c09-8d2a-4d63-8427-3b5d269932c5",
+        "uuid": "c47b6f5f-0af1-4485-b142-b2c511fe49bf",
         "type": "service"
       },
       {
@@ -50,10 +61,16 @@
             "service": "Input",
             "file": "apps/rc/client/modules/input/input.service.ts",
             "params": [],
-            "return": "boolean",
+            "return": {
+              "type": "boolean",
+              "comment": "true or false"
+            },
             "category": "Client",
-            "uuid": "5adb473d-9307-42f1-bce1-916d7bd7555d",
-            "type": "method"
+            "uuid": "075adceb-da93-49bd-8adc-b8f90bf1919e",
+            "type": "method",
+            "line": 36,
+            "description": "This will return true if the input is active otherwise false",
+            "examples": []
           },
           {
             "name": "Destroy",
@@ -65,13 +82,20 @@
                 "type": "ResponseCB",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": true
+                "isOptional": true,
+                "comment": "The callback that well be execuetd when the form is submited"
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Client",
-            "uuid": "53f21d76-f255-4e55-b8f0-bea0eba796c3",
-            "type": "method"
+            "uuid": "dd3d817d-45b2-49ec-9135-77a58573e9c1",
+            "type": "method",
+            "line": 49,
+            "description": "This will destroy the current form",
+            "examples": []
           },
           {
             "name": "Create",
@@ -83,23 +107,31 @@
                 "type": "InputsData",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The data of the form"
               },
               {
                 "name": "handler",
                 "type": "() => void",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "A callback function that will be executed with the data when the form is submited"
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Client",
-            "uuid": "931fdfa1-8df3-47da-ab06-0e627bb9fb60",
-            "type": "method"
+            "uuid": "0ff266a4-51fd-4a18-a8af-577fa965a8a4",
+            "type": "method",
+            "line": 76,
+            "description": "This will create a form",
+            "examples": []
           }
         ],
-        "uuid": "9be701cd-e8e7-464f-9c41-1e5b5ca61efc",
+        "uuid": "ba912b9f-14de-48c6-a44c-51c7c60b7a33",
         "type": "service"
       },
       {
@@ -110,10 +142,16 @@
             "service": "LoadingBar",
             "file": "apps/rc/client/modules/loading-bar/loadingBar.service.ts",
             "params": [],
-            "return": "boolean",
+            "return": {
+              "type": "boolean",
+              "comment": "true or false"
+            },
             "category": "Client",
-            "uuid": "445f1fb8-3431-4eee-a744-f28f88f39c78",
-            "type": "method"
+            "uuid": "d831f7e9-b55b-41c1-8b91-f678820965d2",
+            "type": "method",
+            "line": 26,
+            "description": "This will return a boolean true if the loading bar is active otherwise false",
+            "examples": ["IsActive()"]
           },
           {
             "name": "Create",
@@ -125,16 +163,25 @@
                 "type": "CreationLoadingbarType",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The loadingbar data"
               }
             ],
-            "return": "Promise<void>",
+            "return": {
+              "type": "Promise<void>",
+              "comment": ""
+            },
             "category": "Client",
-            "uuid": "344a121e-e0b3-4dfc-a48b-831c737f8314",
-            "type": "method"
+            "uuid": "5474e141-1552-4e35-b686-16befef7b9c4",
+            "type": "method",
+            "line": 47,
+            "description": "This will create a loading bar",
+            "examples": [
+              "Create({\n duration: 5 // in seconds,\n label: 'Hello world'\n})"
+            ]
           }
         ],
-        "uuid": "248be63a-2a4f-4de6-aa10-acab490893a3",
+        "uuid": "80caba2c-b554-4b65-9e7d-0dd04b04f1a1",
         "type": "service"
       },
       {
@@ -150,16 +197,31 @@
                 "type": "Menu",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The menu informations"
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "{\n    ShowMenu: () => void\n    HideMenu: () => void\n  }",
+              "comment": "2 methods ShowMenu and HideMenu"
+            },
             "category": "Client",
-            "uuid": "d136b3f4-40ff-4415-a6e7-43641e08b358",
-            "type": "method"
+            "uuid": "2b96dc08-4523-4d82-8ac5-9ae88062c5fd",
+            "type": "method",
+            "line": 289,
+            "description": "This will create a menu",
+            "examples": [
+              "Create({\n options: {\n   width: 500,\n   banner: 'IMG LINK'\n }\n items: [\n   {\n     type: 'BUTTON',\n     label: 'Click me',\n     onClick: ( ) => console.log('Button clicked')\n   },\n   {\n     type: 'CHECKBOX',\n     label: 'Hello im a checkbox',\n     onChange: ( ) => console.log('Checkbox changed')\n   }\n ]\n})"
+            ]
           }
         ],
-        "uuid": "c8311d12-8f64-46f9-9b4b-ddcabad247dd",
+        "uuid": "4532eab6-6d7e-4f5d-a9d4-3b96b2ecee14",
+        "type": "service"
+      },
+      {
+        "name": "player",
+        "items": [],
+        "uuid": "5eb34010-4dde-4b07-a9b2-b97e04938e91",
         "type": "service"
       },
       {
@@ -175,13 +237,22 @@
                 "type": "CreateTimelineType",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The timeline parametrs"
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Client",
-            "uuid": "e8f69650-834d-4183-a176-f7899c0a5f7c",
-            "type": "method"
+            "uuid": "68fcc71f-2038-4b0d-b83d-018f48c6efbf",
+            "type": "method",
+            "line": 112,
+            "description": "This will create a timeline",
+            "examples": [
+              "Create({\n rows: [\n   {\n     id: '1',\n     type: 'DOT',\n     label: 'Kill a player'\n   }\n ]\n})"
+            ]
           },
           {
             "name": "Update",
@@ -193,36 +264,55 @@
                 "type": "UpdateTimelineType",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The data to update"
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Client",
-            "uuid": "68ba1539-0a64-4169-acd2-f75430453443",
-            "type": "method"
+            "uuid": "981401dc-9c80-42fb-88e4-21f567a8eba6",
+            "type": "method",
+            "line": 152,
+            "description": "This will update the current timeline",
+            "examples": ["Update({\n id: '1',\n type: 'SET_COMPLETED'\n})"]
           },
           {
             "name": "Destroy",
             "service": "Timeline",
             "file": "apps/rc/client/modules/timeline/timeline.service.ts",
             "params": [],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Client",
-            "uuid": "9f6ec0e8-ecad-4ef8-8f44-294d7c3c4caf",
-            "type": "method"
+            "uuid": "1bd5ea4d-1f9e-4331-9b30-b5b9b60c4ef2",
+            "type": "method",
+            "line": 177,
+            "description": "This will destroy the current active timeline",
+            "examples": ["Destroy()"]
           },
           {
             "name": "IsActive",
             "service": "Timeline",
             "file": "apps/rc/client/modules/timeline/timeline.service.ts",
             "params": [],
-            "return": "void",
+            "return": {
+              "type": "boolean",
+              "comment": "true or false"
+            },
             "category": "Client",
-            "uuid": "47ddf879-b85a-43d5-80ee-232016378c2e",
-            "type": "method"
+            "uuid": "6bf6f327-2a72-44e6-80a3-054c5fddafb6",
+            "type": "method",
+            "line": 202,
+            "description": "Check if a timeline is active",
+            "examples": ["IsActive()"]
           }
         ],
-        "uuid": "c5e740a2-7657-43d3-ad61-fd297ca6280d",
+        "uuid": "d17e6137-995a-4600-8ba0-d956508e921f",
         "type": "service"
       }
     ]
@@ -231,6 +321,12 @@
     "name": "server",
     "_path": "apps/rc/server/modules",
     "items": [
+      {
+        "name": "boot",
+        "items": [],
+        "uuid": "d46d8c9d-60bb-410d-b81d-e07a4a854fef",
+        "type": "service"
+      },
       {
         "name": "commands",
         "items": [
@@ -244,30 +340,41 @@
                 "type": "string",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The command name."
               },
               {
                 "name": "cb",
                 "type": "(source: number, args: unknown[]) => void",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The callback to execute when the command is executed."
               },
               {
                 "name": "authFlags",
                 "type": "PermissionsFlags[]",
                 "hasDefaultValue": true,
                 "defaultValue": "[]",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The permissions flags to have to execute the command."
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Server",
-            "uuid": "43db8a9b-4eef-4057-aed4-355b85b2e8e4",
-            "type": "method"
+            "uuid": "2d1b7422-4da4-4421-af70-1a5237b7b531",
+            "type": "method",
+            "line": 16,
+            "description": "Register a command",
+            "examples": [
+              "AddCommand('ping', (_src) => console.log(`pong from: ${_src}`), ['PLAYER_TALK'])"
+            ]
           }
         ],
-        "uuid": "ee3550e5-0eaf-42d6-9649-456875616a5a",
+        "uuid": "d6414db2-2fb1-42c9-8ab8-dd5ccb82c4f5",
         "type": "service"
       },
       {
@@ -283,23 +390,33 @@
                 "type": "string",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The event to register."
               },
               {
                 "name": "callback",
                 "type": "() => void",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The callback to execute when the event is called."
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Server",
-            "uuid": "a5859cc1-e45b-4e10-be21-71ec9c4f86ee",
-            "type": "method"
+            "uuid": "972dfa9c-0bc6-4cbf-9816-accd0f122d8d",
+            "type": "method",
+            "line": 21,
+            "description": "Register an event",
+            "examples": [
+              "OnServerEvent('NX::sayHelloWorld', () => console.log('sayHelloWorld'))"
+            ]
           }
         ],
-        "uuid": "0c57f5d4-95fe-401b-8cfb-3a0e760a34a1",
+        "uuid": "ede12f51-b70f-4018-8193-5e7581b6a2c8",
         "type": "service"
       },
       {
@@ -315,23 +432,33 @@
                 "type": "string",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The name of the item to register."
               },
               {
                 "name": "cb",
                 "type": "() => void",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The callback to execute when the item is used."
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Server",
-            "uuid": "de383a1f-df53-4a90-a431-c805d5dbd52c",
-            "type": "method"
+            "uuid": "fa607daf-c7ac-436f-8cff-1e473abd14c2",
+            "type": "method",
+            "line": 192,
+            "description": "Register an item as usable",
+            "examples": [
+              "RegisterUsableItem('phone', () => console.log('Item used'))"
+            ]
           }
         ],
-        "uuid": "5a6e50a6-43d1-4cbf-96d8-a0e9be1bc207",
+        "uuid": "03a131c2-9b04-4a32-995f-ef0806866b40",
         "type": "service"
       },
       {
@@ -342,20 +469,34 @@
             "service": "Player",
             "file": "apps/rc/server/modules/player/player.service.ts",
             "params": [],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": ""
+            },
             "category": "Server",
-            "uuid": "2de7ee17-d74d-4b33-b4a4-ada55015eab3",
-            "type": "method"
+            "uuid": "a3c7c1ca-00c3-4040-8029-32bba24a73ba",
+            "type": "method",
+            "line": 78,
+            "description": "Save all connected players to the database.",
+            "examples": ["SaveAll()"]
           },
           {
             "name": "GetAll",
             "service": "Player",
             "file": "apps/rc/server/modules/player/player.service.ts",
             "params": [],
-            "return": "Promise<number[] | []>",
+            "return": {
+              "type": "Promise<number[] | []>",
+              "comment": ""
+            },
             "category": "Server",
-            "uuid": "29d73e71-c5a7-488c-a4bd-3111f77a18f6",
-            "type": "method"
+            "uuid": "9f29727a-aba3-49de-9e9d-c0b2ef94f57f",
+            "type": "method",
+            "line": 193,
+            "description": "Get connected players sources",
+            "examples": [
+              "const NXPlayers = GetAll()\nconsole.log(NXPlayers.length)"
+            ]
           },
           {
             "name": "Get",
@@ -367,23 +508,40 @@
                 "type": "number",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": ""
               }
             ],
-            "return": "Promise<NXPlayerMethodsCapitalized | false>",
+            "return": {
+              "type": "Promise<NXPlayerMethodsCapitalized | false>",
+              "comment": ""
+            },
             "category": "Server",
-            "uuid": "dff8ec16-1a02-42f8-a4d8-fc14373d37a3",
-            "type": "method"
+            "uuid": "03ee6108-7472-4df7-80a7-da469d0ced6d",
+            "type": "method",
+            "line": 214,
+            "description": "Get connected player",
+            "examples": [
+              "const NXPlayer = Get(1)\nconsole.log(NXPlayer.GetName())"
+            ]
           },
           {
             "name": "GetAllData",
             "service": "Player",
             "file": "apps/rc/server/modules/player/player.service.ts",
             "params": [],
-            "return": "Promise<NXPlayer[] | []>",
+            "return": {
+              "type": "Promise<NXPlayer[] | []>",
+              "comment": ""
+            },
             "category": "Server",
-            "uuid": "0b80648f-b05f-4e25-b035-d6c13f69c487",
-            "type": "method"
+            "uuid": "de2ea4b1-b6f8-4bd2-83f3-65e9a6049310",
+            "type": "method",
+            "line": 231,
+            "description": "Get all connected players",
+            "examples": [
+              "const NXPlayers = GetAllData()\nconsole.log(NXPlayers.length)"
+            ]
           },
           {
             "name": "GetData",
@@ -395,16 +553,25 @@
                 "type": "number",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": ""
               }
             ],
-            "return": "Promise<NXPlayer | false>",
+            "return": {
+              "type": "Promise<NXPlayer | false>",
+              "comment": ""
+            },
             "category": "Server",
-            "uuid": "c1d14d40-084f-41f2-a505-4c999dcca71e",
-            "type": "method"
+            "uuid": "2f523aae-0926-4a84-8686-4feecf6cdab0",
+            "type": "method",
+            "line": 252,
+            "description": "Get player data",
+            "examples": [
+              "const NXPlayer = GetData(1)\nconsole.log(NXPlayer.charinfo.lastname)"
+            ]
           }
         ],
-        "uuid": "2de46542-dfca-47c6-9a17-0174bba6428c",
+        "uuid": "707f7a8a-baea-4555-a87b-22998ac4fc16",
         "type": "service"
       },
       {
@@ -416,17 +583,32 @@
             "file": "apps/rc/server/modules/services/permissions.service.ts",
             "params": [
               {
-                "name": "object",
-                "type": "{\n    group: string\n    flag: keyof typeof PermissionsFlags\n  }",
+                "name": "group",
+                "type": "string",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The name of the group to check."
+              },
+              {
+                "name": "flag",
+                "type": "keyof typeof PermissionsFlags",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false,
+                "comment": "The permission flag to check."
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "void",
+              "comment": "True if the group has the specified permission flag, false otherwise."
+            },
             "category": "Server",
-            "uuid": "02a06e8b-8a47-4422-92b7-a1c4aff13ede",
-            "type": "method"
+            "uuid": "07273972-609a-4371-a6db-a7b421204df1",
+            "type": "method",
+            "line": 25,
+            "description": "Checks if a group has the specified permission flag.",
+            "examples": ["DoesGroupHasFlag('owner', 'PLAYER_BAN')"]
           },
           {
             "name": "DoesGroupHasAllFlags",
@@ -434,20 +616,37 @@
             "file": "apps/rc/server/modules/services/permissions.service.ts",
             "params": [
               {
-                "name": "object",
-                "type": "{\n    group: string\n    flags: Array<keyof typeof PermissionsFlags>\n  }",
+                "name": "group",
+                "type": "string",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The name of the group to check."
+              },
+              {
+                "name": "flags",
+                "type": "Array<keyof typeof PermissionsFlags>",
+                "hasDefaultValue": false,
+                "defaultValue": "-",
+                "isOptional": false,
+                "comment": "The permission flags to check."
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "boolean",
+              "comment": "True if the group has all the specified permission flags, false otherwise."
+            },
             "category": "Server",
-            "uuid": "37a615c9-0797-4681-8bcb-026c5cf9df98",
-            "type": "method"
+            "uuid": "34bf2ca2-21ec-4701-b211-f1ef645e2222",
+            "type": "method",
+            "line": 48,
+            "description": "Checks if a group has all the specified permission flags.",
+            "examples": [
+              "DoesGroupHasAllFlags('owner', ['PLAYER_BAN', 'VEHICLE_CREATE'])"
+            ]
           },
           {
-            "name": "HasMorePermissions",
+            "name": "HasMorePower",
             "service": "Permissions",
             "file": "apps/rc/server/modules/services/permissions.service.ts",
             "params": [
@@ -456,25 +655,752 @@
                 "type": "string",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The group to check if he has more permissions"
               },
               {
                 "name": "targetGroup",
                 "type": "string",
                 "hasDefaultValue": false,
                 "defaultValue": "-",
-                "isOptional": false
+                "isOptional": false,
+                "comment": "The second group"
               }
             ],
-            "return": "void",
+            "return": {
+              "type": "boolean",
+              "comment": "a boolean value"
+            },
             "category": "Server",
-            "uuid": "fc6f389a-65a4-4757-ba2e-f60ea9dbe9cf",
-            "type": "method"
+            "uuid": "d7035b70-96df-40b1-b9c2-d787b24cb052",
+            "type": "method",
+            "line": 90,
+            "description": "Check if a group has more permissions then another",
+            "examples": ["// returns true\nhasMorePower('owner', 'admin');"]
           }
         ],
-        "uuid": "a0928744-a150-43eb-8511-c49bb08d36d0",
+        "uuid": "361d3da8-9056-4627-ac86-d8b0df0884d7",
         "type": "service"
       }
     ]
+  },
+  {
+    "name": "nxPlayer",
+    "items": [
+      {
+        "name": "GetWeight",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "ea1f93b3-593f-4908-a0f6-e0b6e65e605e",
+        "type": "p_method",
+        "line": 62,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetSkin",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "4fccf0b5-74b4-4148-a969-c6f801ab9ebf",
+        "type": "p_method",
+        "line": 66,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetName",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "69314e82-b33f-4ccf-9fa9-ca2423c4df25",
+        "type": "p_method",
+        "line": 70,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetCharInfo",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "69f2c9b7-3c34-42a7-af7a-b65adef0cd23",
+        "type": "p_method",
+        "line": 74,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetIdentifier",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "ecaf160e-dcf1-4b23-a1dc-2c43526e2099",
+        "type": "p_method",
+        "line": 78,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetCoords",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "91281850-55c0-4aba-8818-d7b7bd5ff602",
+        "type": "p_method",
+        "line": 82,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetInventory",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "93340139-3487-471f-8419-6ac9af7b05ab",
+        "type": "p_method",
+        "line": 86,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetAccounts",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "a555f6bb-16cd-4af2-bc52-a130c18bfc0c",
+        "type": "p_method",
+        "line": 90,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetGroup",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "5043b09e-4bc4-4c16-97f6-9ad3e2679d26",
+        "type": "p_method",
+        "line": 94,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetBloodType",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "5a5f445e-18b7-4fd6-9736-6b3bc8968377",
+        "type": "p_method",
+        "line": 98,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetThirst",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "87f86ae0-8766-49ab-859e-d5d2ac60be0f",
+        "type": "p_method",
+        "line": 102,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetHunger",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "dc5b19d9-4848-448a-b3ba-759b570e88de",
+        "type": "p_method",
+        "line": 106,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetMaxWeight",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "3bd76fd7-4125-4cd8-9a26-0e986bb8855e",
+        "type": "p_method",
+        "line": 110,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetUID",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "76f766c4-ac11-47af-9199-8e2e38d2d54a",
+        "type": "p_method",
+        "line": 114,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetAccountMoney",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "account",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "9ada81aa-d884-45f1-93ce-7848400177fb",
+        "type": "p_method",
+        "line": 118,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetJob",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "type",
+            "type": "number | ''",
+            "hasDefaultValue": true,
+            "defaultValue": "1",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "30a0896f-67e9-4677-be90-682217dc02f7",
+        "type": "p_method",
+        "line": 124,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "GetJobs",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "69decfaa-67eb-4862-9d20-ac9e4597f7c2",
+        "type": "p_method",
+        "line": 143,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "SetThirst",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "value",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "30713238-343f-47ac-b8ef-8582dfc47750",
+        "type": "p_method",
+        "line": 148,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "SetSkin",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "skin",
+            "type": "Record<string, string>",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "3b35fc90-7e79-4d70-85a2-0a49559fb4ab",
+        "type": "p_method",
+        "line": 152,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "SetHunger",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "value",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "58a9e608-56f6-4e08-9eb3-a325540154ed",
+        "type": "p_method",
+        "line": 158,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "SetGroup",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "permission",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "6a9d0bf3-dba7-4fa9-94aa-87226da2551d",
+        "type": "p_method",
+        "line": 162,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "SetAccountMoney",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "account",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "money",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "c00974c4-b61e-4153-beab-413895dbf7ae",
+        "type": "p_method",
+        "line": 171,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "SetJob",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "name",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "grade",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "type",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "cb",
+            "type": "(res: JobCB) => void",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": true,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "107d1bc3-12c1-40cf-a0d1-56c38c8098e3",
+        "type": "p_method",
+        "line": 184,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "SetCoords",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "x",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "y",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "z",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "heading",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "58fc717d-c31f-4365-aa64-bccb14fa05c4",
+        "type": "p_method",
+        "line": 228,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "SetCharInfoKey",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "key",
+            "type": "string | string[]",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "value",
+            "type": "string | string[]",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "f82b5db2-e082-4609-bf61-72b24430a92a",
+        "type": "p_method",
+        "line": 239,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "EmitEvent",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "name",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "args",
+            "type": "unknown[]",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "979a4ef9-fcf0-4a7a-a854-70a9686c3b20",
+        "type": "p_method",
+        "line": 254,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "HasItem",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "name",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "22702383-8c19-4f58-95d1-201597d4dc17",
+        "type": "p_method",
+        "line": 258,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "RemoveItem",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "name",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "amount",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "cb",
+            "type": "ResponseCB",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": true,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "d38d059e-0bc5-4742-b135-60268de8d8de",
+        "type": "p_method",
+        "line": 266,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "CanTakeItem",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "name",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "amount",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "cb18247b-fe61-4b81-aefc-8eff6946f47e",
+        "type": "p_method",
+        "line": 314,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "AddItem",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "name",
+            "type": "string",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "amount",
+            "type": "number",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": false,
+            "comment": ""
+          },
+          {
+            "name": "cb",
+            "type": "ResponseCB",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": true,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "794e8d4d-b345-4d24-a738-65a471707c4b",
+        "type": "p_method",
+        "line": 325,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "Save",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "cb",
+            "type": "ResponseCB",
+            "hasDefaultValue": false,
+            "defaultValue": "-",
+            "isOptional": true,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "f2658413-1c85-4b87-b46b-d6b36a7e1b95",
+        "type": "p_method",
+        "line": 383,
+        "description": "",
+        "examples": []
+      },
+      {
+        "name": "Kick",
+        "file": "apps/rc/server/modules/player/player.class.ts",
+        "params": [
+          {
+            "name": "reason",
+            "type": "unknown",
+            "hasDefaultValue": true,
+            "defaultValue": "'no reason'",
+            "isOptional": false,
+            "comment": ""
+          }
+        ],
+        "return": {
+          "type": "void",
+          "comment": ""
+        },
+        "uuid": "5dfbf4f0-0096-44e1-8640-d4a2cd7894d7",
+        "type": "p_method",
+        "line": 408,
+        "description": "",
+        "examples": []
+      }
+    ],
+    "uuid": "582f690d-7161-410c-b4a9-5311e51ad930"
   }
 ]
